@@ -56,7 +56,7 @@ function App() {
         </div>
       </div>
 
-      <div className="logo_slider" style={{ display: "none" }}>
+      <div className="logo_slider">
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
