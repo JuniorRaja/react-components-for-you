@@ -170,7 +170,7 @@ function App() {
       </div>
       <br />
       <br />
-      <ScrollGallery />
+      {/* <ScrollGallery /> */}
     </div>
   );
 }
