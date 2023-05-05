@@ -1,8 +1,9 @@
 import "./App.css";
+import ScrollGallery from "./Components/ScrollGallery/ScrollGallery";
 
 function App() {
   return (
-    <div>
+    <div className="ParentDiv">
       <div className="outerDiv">
         <div id="book_1">
           <a className="bookPerspective">
@@ -167,6 +168,9 @@ function App() {
         </div>
         <div className="overlay"></div>
       </div>
+      <br />
+      <br />
+      <ScrollGallery />
     </div>
   );
 }
