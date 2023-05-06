@@ -1,61 +1,34 @@
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import ScrollGallery from "./Components/ScrollGallery/ScrollGallery";
+import Home from "./Home";
+import Books from "./Components/Books/Books";
 
 function App() {
   return (
     <div className="ParentDiv">
-      <div className="outerDiv">
-        <div id="book_1">
-          <a className="bookPerspective">
-            <div className="bookRotateWrapper">
-              <div className="bookGuideSplit">
-                <div className="bookBind"></div>
-                <div className="bookFace">
-                  <div className="bookFace_contents">
-                    <h3>Sapiens</h3>
-                    <p>A Brief History of Humankind</p>
-                    <small>Yual Noah Harrari</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+      <Router>
+        <Routes>
+          {/* This route is for home component 
+          with exact path "/", in component props 
+          we passes the imported component*/}
+          <Route exact path="/" element={<Home />} />
 
-        <div id="book_2">
-          <a className="bookPerspective">
-            <div className="bookRotateWrapper book2">
-              <div className="bookGuideSplit">
-                <div className="bookBind"></div>
-                <div className="bookFace">
-                  <div className="bookFace_contents">
-                    <h3>48 Laws of Human Nature</h3>
-                    <p>Laws of Human Nature</p>
-                    <small>Robert Greene</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+          <Route path="/Components/Books/Books" element={<Books />} />
 
-        <div id="book_3">
-          <a className="bookPerspective">
-            <div className="bookRotateWrapper book3">
-              <div className="bookGuideSplit">
-                <div className="bookBind"></div>
-                <div className="bookFace">
-                  <div className="bookFace_contents">
-                    <h3>IKIGAI</h3>
-                    <p>The Japanese Secret</p>
-                    <small>Héctor García, Francesc Miralles</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+          <Route
+            path="/Components/ScrollGallery/ScrollGallery"
+            element={<ScrollGallery />}
+          />
+        </Routes>
+      </Router>
+
+      {/* 
 
       <div className="logo_slider">
         <div className="slider">
@@ -167,7 +140,7 @@ function App() {
           </div>
         </div>
         <div className="overlay"></div>
-      </div>
+      </div> */}
       <br />
       <br />
       {/* <ScrollGallery /> */}

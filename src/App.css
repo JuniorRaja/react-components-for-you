@@ -3,18 +3,6 @@ body {
   justify-content: center;
 }
 
-.outerDiv {
-  text-rendering: optimizeLegibility;
-  padding: 5rem;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  flex: initial;
-  grid-gap: 25px;
-  gap: 50px;
-}
-
 ::after,
 ::before {
   box-sizing: border-box;
@@ -33,106 +21,6 @@ body {
   --animation-speed: 30s;
 }
 
-.bookPerspective {
-  perspective: 900px;
-  margin-right: 1em;
-  transition: color .2s ease;
-}
-
-.bookRotateWrapper {
-  background-color: var(--bookA-color);
-  height: var(--book-height);
-  width: var(--book-width);
-  border-radius: var(--book-border-radius);
-
-  transform: rotate(0deg);
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform .6s ease;
-  box-shadow: none;
-}
-
-.bookRotateWrapper:hover {
-  transform: rotateY(-20deg) scale(1.066) translateX(0.5em);
-}
-
-
-.bookRotateWrapper::before {
-  content: "";
-  background: linear-gradient(90deg, var(--accent) 0, transparent 30%),
-    linear-gradient(#fff, #fafafa);
-  height: calc(var(--book-height) - 2 * 3px);
-  width: calc(var(--book-depth) - 2px);
-  top: 3px;
-  position: absolute;
-  transform: translateX(calc(var(--book-width) - var(--book-depth) / 2 - 7px)) rotateY(90deg) translateX(calc(var(--book-depth) / 2));
-}
-
-.bookRotateWrapper::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  width: var(--book-width);
-  height: var(--book-height);
-  border-radius: var(--book-border-radius);
-  background: var(--bookA-color);
-  transform: translateZ(calc(-1 * var(--book-depth)));
-}
-
-.bookGuideSplit {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  gap: 0px;
-  position: absolute;
-  width: var(--book-width);
-  height: var(--book-height);
-  min-width: 200px;
-  min-height: var(--book-height);
-  border-radius: 5.4px 1.8px 1.8px 5.4px;
-  background: linear-gradient(180deg, hsla(0, 0%, 100%, .1) 0, hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 100%, 0) 100%), var(--book-color);
-  box-shadow: 0 1.8px 3.6px rgba(0, 0, 0, .05), 0 10.8px 21.6px rgba(0, 0, 0, .08), inset 0 -0.9px 0 rgba(0, 0, 0, .1), inset 0 1.8px 1.8px hsla(0, 0%, 100%, .1), inset 3.6px 0 3.6px rgba(0, 0, 0, .1);
-}
-
-.bookBind {
-  height: 100%;
-  width: 30%;
-  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 12%, hsla(0, 0%, 100%, .25) 29.25%, hsla(0, 0%, 100%, 0) 50.5%, hsla(0, 0%, 100%, 0) 75.25%, hsla(0, 0%, 100%, .25) 91%, hsla(0, 0%, 100%, 0)), linear-gradient(90deg, rgba(0, 0, 0, .03), rgba(0, 0, 0, .1) 12%, transparent 30%, rgba(0, 0, 0, .02) 50%, rgba(0, 0, 0, .2) 73.5%, rgba(0, 0, 0, .5) 75.25%, rgba(0, 0, 0, .15) 85.25%, transparent);
-  opacity: .4;
-}
-
-.bookFace {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  flex: initial;
-  grid-gap: 0;
-  gap: 0;
-  padding: 1.5rem 1.25rem;
-  min-width: 70%;
-}
-
-.bookFace_contents h3 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: -.04em;
-  color: rgba(0, 0, 0, 0.7);
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
-}
-
-.book2,
-.book2::after {
-  background-color: var(--bookB-color);
-}
-
-.book3,
-.book3::after {
-  background-color: #B2A4FF;
-}
 
 
 
