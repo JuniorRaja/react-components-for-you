@@ -1,7 +1,6 @@
 import React from "react";
-// importing Link from react-router-dom to navigate to
-// different end points.
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -17,9 +16,14 @@ const Home = () => {
         <li>
           <Link to="/Components/Books/Books">Books</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/Components/ScrollGallery/ScrollGallery">
             Scroll Gallery
+          </Link>
+        </li> */}
+        <li>
+          <Link to="/Components/DayNightSwitch/DayNightSwitch">
+            Day Night Switch
           </Link>
         </li>
       </ul>

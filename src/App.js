@@ -1,13 +1,8 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import ScrollGallery from "./Components/ScrollGallery/ScrollGallery";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Books from "./Components/Books/Books";
+import DayNightSwitch from "./Components/DayNightSwitch/DayNightSwitch";
 
 function App() {
   return (
@@ -21,9 +16,14 @@ function App() {
 
           <Route path="/Components/Books/Books" element={<Books />} />
 
-          <Route
+          {/* <Route
             path="/Components/ScrollGallery/ScrollGallery"
             element={<ScrollGallery />}
+          /> */}
+
+          <Route
+            path="/Components/DayNightSwitch/DayNightSwitch"
+            element={<DayNightSwitch />}
           />
         </Routes>
       </Router>
@@ -141,8 +141,7 @@ function App() {
         </div>
         <div className="overlay"></div>
       </div> */}
-      <br />
-      <br />
+     
       {/* <ScrollGallery /> */}
     </div>
   );
