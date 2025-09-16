@@ -11,6 +11,9 @@ A React Project made with `npm create-react-app` containing several component sn
 ## 2. Icon-slider
   A list of icons put on auto carousel
   
+## 3. Day Night Switch w Animations
+  A Day Night Switch Control with Sun-Moon-Stars CSS Animations
+  
   
 # Notes
   Feel free to refer
